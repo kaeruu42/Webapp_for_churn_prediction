@@ -1,0 +1,218 @@
+<!---Initialize Home Page--->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <div class = "title">
+            <h1>Churn Predictor</h1>
+            
+        </div>
+       
+        <!---Containerize main page for styling--->
+        <div class = "page">
+            <!---Containerize paragraph and form for styling--->
+            <div class = "container">
+                
+                <!---Initialize form structure and inputs, set method to "POST"--->
+                <form action = "/" method = "post" class = "info">
+					<label>Gender:</label>
+                    <!-- <input type="text" id="gender" name="gender" placeholder="Gender: 1 for male, 0 for female" required="required"/><span style="color:red"> * </span> -->
+					<input type="radio" id="male" name="gender" value="1" required="required"/>
+					<label>male</label>
+					<input type="radio" id="female" name="gender" value="0" required="required"/>
+					<label>female</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Senior citizen?:</label>
+                    <!-- <input type="text" id="senior" name="senior" placeholder="Senior citizen?" required="required"/><span style="color:red"> * </span> -->
+					<input type="radio" id="yes" name="senior" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="senior" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Partner?:</label>
+                    <!-- <input type="text" id="partner" name="partner" placeholder="Partner?" required="required"/><span style="color:red"> * </span> -->
+					<input type="radio" id="yes" name="partner" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="partner" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Dependents?:</label>
+                    <!-- <input type="text" id="dependents" name="dependents" placeholder="Dependents?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="dependents" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="dependents" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Tenure (months):</label>
+                    <input type="text" name="tenure" placeholder="Tenure:"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<label>Phone service?:</label>
+					<!-- <input type="text" name="phone" placeholder="Phone service?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="phone" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="phone" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Multiple lines?:</label>
+					<!-- <input type="text" name="multipleLines" placeholder="Multiple lines?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="multiline" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="multiline" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Online security?:</label>
+					<!-- <input type="text" name="onlineSecurity" placeholder="Online security?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="onlinesec" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="onlinesec" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Online backup?:</label>
+					<!-- <input type="text" name="onlineBackup" placeholder="Online backup?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="onlineback" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="onlineback" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Device protection?:</label>
+					<!-- <input type="text" name="deviceProtection" placeholder="Device protection?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="protect" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="protect" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Tech support?:</label>
+					<!-- <input type="text" name="techSupport" placeholder="Tech support?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="techsupport" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="techsupport" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Streaming tv?:</label>
+					<!-- <input type="text" name="tv" placeholder="Streaming tv?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="tv" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="tv" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Streaming movies?:</label>
+					<!-- <input type="text" name="movies" placeholder="Streaming movies?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="movie" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="movie" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Paperless billing?:</label>
+					<!-- <input type="text" name="paperless" placeholder="Paperless billing?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="yes" name="paperless" value="1" required="required"/>
+					<label>yes</label>
+					<input type="radio" id="no" name="paperless" value="0" required="required" checked />
+					<label>no</label><span style="color:red"> * </span>
+                    <br>
+                    <br>
+					<label>Monthly charges: $</label>
+					<input type="text" name="monthly" placeholder="Monthly charges:"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<label>Total charges: $</label>
+					<input type="text" name="total" placeholder="Total charges:"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<label>Internet:</label>
+					<!-- <input type="text" name="dsl" placeholder="Internet is DSL?"/><span style="color:red" required="required"> * </span> -->
+					<input type="radio" id="DSLyes" name="dsl" value="1" required="required"/>
+					<label>DSL</label>
+					<input style="display:none" type="radio" id="DSLno" name="dsl" value="0" required="required" checked />
+					<input type="radio" id="fiberyes" name="fiber" value="1" required="required"/>
+					<label>Fiber Optic</label>
+					<input style="display:none" type="radio" id="fiberno" name="fiber" value="0" required="required" checked />
+					<input type="radio" id="nonetyes" name="noInternet" value="1" required="required"/>
+					<label>No Internet Service</label>
+					<input style="display:none" type="radio" id="nonetno" name="noInternet" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<!--
+                    <br>
+                    <br>
+					<input type="text" name="fiber" placeholder="Internet is Fiber Optic?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="noInternet" placeholder="No internet service?"/><span style="color:red" required="required"> * </span> -->
+                    <br>
+                    <br>
+					<label>Contract:</label>
+					<input type="radio" id="m2myes" name="m2m" value="1" required="required"/>
+					<label>Month-to-month</label>
+					<input style="display:none" type="radio" id="m2mno" name="m2m" value="0" required="required" checked />
+					<input type="radio" id="oneyryes" name="oneYr" value="1" required="required"/>
+					<label>One-year</label>
+					<input style="display:none" type="radio" id="oneyrno" name="oneYr" value="0" required="required" checked />
+					<input type="radio" id="twoyryes" name="twoYr" value="1" required="required"/>
+					<label>Two-Year</label>
+					<input style="display:none" type="radio" id="twoyrno" name="twoYr" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<!--
+					<input type="text" name="month2month" placeholder="Contract is month-to-month?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="oneyear" placeholder="Contract is one-year?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="twoyear" placeholder="Contract is two-year?"/><span style="color:red" required="required"> * </span>
+					-->
+                    <br>
+                    <br>
+					<label>Payment Method:</label>
+					<input type="radio" id="bankyes" name="bank" value="1" required="required"/>
+					<label>Bank transfer (automatic)</label>
+					<input style="display:none" type="radio" id="bankno" name="bank" value="0" required="required" checked />
+					<input type="radio" id="ccyes" name="creditcard" value="1" required="required"/>
+					<label>Credit card (automatic)</label>
+					<input style="display:none" type="radio" id="ccno" name="creditcard" value="0" required="required" checked />
+					<input type="radio" id="echeckyes" name="echeck" value="1" required="required"/>
+					<label>Electronic check</label>
+					<input style="display:none" type="radio" id="echeckno" name="echeck" value="0" required="required" checked />
+					<input type="radio" id="mailyes" name="mailed" value="1" required="required"/>
+					<label>Mailed check</label>
+					<input style="display:none" type="radio" id="mailno" name="mailed" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<!--
+					<input type="text" name="banktrans" placeholder="Payment Method is Bank transfer (automatic)?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="credcard" placeholder="Payment Method is credit card (automatic)?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="echeck" placeholder="Payment Method is electronic check?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					<input type="text" name="mailed" placeholder="Payment Method is mailed check?"/><span style="color:red" required="required"> * </span>
+                    <br>
+                    <br>
+					-->
+					<br>
+                    <br>
+					
+                    <button type="submit" class="btn">Predict</button>
+                </form>
+                <br> 
+                <!---Set placeholder for prediction output
+                <div class ="pred">
+                    <p class = "result"><b>{{ prediction_text }}</b></p>
+                </div> --->
+            </div>
+        </div>
+    </body>
+</html>
