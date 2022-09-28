@@ -7,7 +7,7 @@
     <body>
 
         <div class = "title">
-            <h1>Churn Predictor</h1>
+            <h2>Churn Predictor</h2>
             
         </div>
        
@@ -31,7 +31,7 @@
 					<input type="radio" id="yes" name="senior" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="senior" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Partner?:</label>
@@ -39,7 +39,7 @@
 					<input type="radio" id="yes" name="partner" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="partner" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Dependents?:</label>
@@ -47,7 +47,7 @@
 					<input type="radio" id="yes" name="dependents" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="dependents" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Tenure (months):</label>
@@ -59,7 +59,7 @@
 					<input type="radio" id="yes" name="phone" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="phone" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Multiple lines?:</label>
@@ -67,7 +67,7 @@
 					<input type="radio" id="yes" name="multiline" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="multiline" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Online security?:</label>
@@ -75,7 +75,7 @@
 					<input type="radio" id="yes" name="onlinesec" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="onlinesec" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Online backup?:</label>
@@ -83,7 +83,7 @@
 					<input type="radio" id="yes" name="onlineback" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="onlineback" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Device protection?:</label>
@@ -91,7 +91,7 @@
 					<input type="radio" id="yes" name="protect" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="protect" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Tech support?:</label>
@@ -99,7 +99,7 @@
 					<input type="radio" id="yes" name="techsupport" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="techsupport" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Streaming tv?:</label>
@@ -107,7 +107,7 @@
 					<input type="radio" id="yes" name="tv" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="tv" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Streaming movies?:</label>
@@ -115,7 +115,7 @@
 					<input type="radio" id="yes" name="movie" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="movie" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Paperless billing?:</label>
@@ -123,7 +123,7 @@
 					<input type="radio" id="yes" name="paperless" value="1" required="required"/>
 					<label>yes</label>
 					<input type="radio" id="no" name="paperless" value="0" required="required" checked />
-					<label>no</label><span style="color:red"> * </span>
+					<label>no</label>
                     <br>
                     <br>
 					<label>Monthly charges: $</label>
@@ -134,17 +134,21 @@
 					<input type="text" name="total" placeholder="Total charges:"/><span style="color:red" required="required"> * </span>
                     <br>
                     <br>
-					<label>Internet:</label>
+					<label>Internet:</label><br>
 					<!-- <input type="text" name="dsl" placeholder="Internet is DSL?"/><span style="color:red" required="required"> * </span> -->
-					<input type="radio" id="DSLyes" name="dsl" value="1" required="required"/>
+					<input onchange="internetChanged()" type="radio" id="DSLyes" name="dsl" value="1" required="required"/>
 					<label>DSL</label>
-					<input style="display:none" type="radio" id="DSLno" name="dsl" value="0" required="required" checked />
-					<input type="radio" id="fiberyes" name="fiber" value="1" required="required"/>
+					<input type="radio" id="DSLno" name="dsl" value="0" required="required" checked />
+					<label>Not DSL</label><br>
+					<input onchange="internetChanged()" type="radio" id="fiberyes" name="fiber" value="1" required="required"/>
 					<label>Fiber Optic</label>
-					<input style="display:none" type="radio" id="fiberno" name="fiber" value="0" required="required" checked />
-					<input type="radio" id="nonetyes" name="noInternet" value="1" required="required"/>
+					<input type="radio" id="fiberno" name="fiber" value="0" required="required" checked />
+					<label>Not Fiber</label><br>
+					<input onchange="internetChanged()" type="radio" id="nonetyes" name="noInternet" value="1" required="required"/>
 					<label>No Internet Service</label>
-					<input style="display:none" type="radio" id="nonetno" name="noInternet" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<input type="radio" id="nonetno" name="noInternet" value="0" required="required" checked /> 
+					<label>Not no internet</label>
+					
 					<!--
                     <br>
                     <br>
@@ -154,16 +158,19 @@
 					<input type="text" name="noInternet" placeholder="No internet service?"/><span style="color:red" required="required"> * </span> -->
                     <br>
                     <br>
-					<label>Contract:</label>
+					<label>Contract:</label><br>
 					<input type="radio" id="m2myes" name="m2m" value="1" required="required"/>
 					<label>Month-to-month</label>
-					<input style="display:none" type="radio" id="m2mno" name="m2m" value="0" required="required" checked />
+					<input type="radio" id="m2mno" name="m2m" value="0" required="required" checked />
+					<label>Not Month-to-month</label><br>
 					<input type="radio" id="oneyryes" name="oneYr" value="1" required="required"/>
 					<label>One-year</label>
-					<input style="display:none" type="radio" id="oneyrno" name="oneYr" value="0" required="required" checked />
+					<input type="radio" id="oneyrno" name="oneYr" value="0" required="required" checked />
+					<label>Not One-year</label><br>
 					<input type="radio" id="twoyryes" name="twoYr" value="1" required="required"/>
 					<label>Two-Year</label>
-					<input style="display:none" type="radio" id="twoyrno" name="twoYr" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<input type="radio" id="twoyrno" name="twoYr" value="0" required="required" checked />
+					<label>Not Two-year</label>
 					<!--
 					<input type="text" name="month2month" placeholder="Contract is month-to-month?"/><span style="color:red" required="required"> * </span>
                     <br>
@@ -175,19 +182,23 @@
 					-->
                     <br>
                     <br>
-					<label>Payment Method:</label>
+					<label>Payment Method:</label><br>
 					<input type="radio" id="bankyes" name="bank" value="1" required="required"/>
 					<label>Bank transfer (automatic)</label>
-					<input style="display:none" type="radio" id="bankno" name="bank" value="0" required="required" checked />
+					<input type="radio" id="bankno" name="bank" value="0" required="required" checked />
+					<label>Not Bank transfer (automatic)</label><br>
 					<input type="radio" id="ccyes" name="creditcard" value="1" required="required"/>
 					<label>Credit card (automatic)</label>
-					<input style="display:none" type="radio" id="ccno" name="creditcard" value="0" required="required" checked />
+					<input type="radio" id="ccno" name="creditcard" value="0" required="required" checked />
+					<label>Not Credit card (automatic)</label><br>
 					<input type="radio" id="echeckyes" name="echeck" value="1" required="required"/>
 					<label>Electronic check</label>
-					<input style="display:none" type="radio" id="echeckno" name="echeck" value="0" required="required" checked />
+					<input type="radio" id="echeckno" name="echeck" value="0" required="required" checked />
+					<label>Not Electronic check</label><br>
 					<input type="radio" id="mailyes" name="mailed" value="1" required="required"/>
 					<label>Mailed check</label>
-					<input style="display:none" type="radio" id="mailno" name="mailed" value="0" required="required" checked /> <span style="color:red"> * </span>
+					<input type="radio" id="mailno" name="mailed" value="0" required="required" checked /> 
+					<label>Not Mailed check</label>
 					<!--
 					<input type="text" name="banktrans" placeholder="Payment Method is Bank transfer (automatic)?"/><span style="color:red" required="required"> * </span>
                     <br>
@@ -214,5 +225,22 @@
                 </div> --->
             </div>
         </div>
+		
+		<script>
+			
+			function internetChanged() {
+				if document.getElementById("DSLyes").checked {
+					document.getElementById("fiberyes").checked = false;
+					document.getElementById("nonetyes").checked = false;
+				}else if document.getElementById("fiberyes").checked {
+					document.getElementById("nonetno").checked = true;
+					document.getElementById("DSLno").checked = true;
+				}else if document.getElementById("nonetyes").checked {
+					document.getElementById("DSLno").checked = true;
+					document.getElementById("fiberno").checked = true;
+				}
+			}
+		</script>
     </body>
+	
 </html>
